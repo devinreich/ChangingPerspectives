@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rZQ-jh-iyA">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="ChangingPerspectives" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pj0-rn-zAQ">
+                                <rect key="frame" x="16" y="744" width="382" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Jw6-te-OiH"/>
+                                </constraints>
+                                <state key="normal" title="Perspective Changed">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="changePerspective:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PTT-ls-zK6"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue_white_dress" translatesAutoresizingMaskIntoConstraints="NO" id="G9h-UA-lRb">
+                                <rect key="frame" x="57" y="198" width="300" height="500"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="4pi-fE-mGg"/>
+                                    <constraint firstAttribute="height" constant="500" id="eon-Yz-1eZ"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.25" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="2sv-jd-B3B">
+                                <rect key="frame" x="14" y="706" width="386" height="31"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="1Lp-QY-SyH"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2sv-jd-B3B" firstAttribute="top" secondItem="G9h-UA-lRb" secondAttribute="bottom" constant="8" id="9lq-jP-drK"/>
+                            <constraint firstItem="2sv-jd-B3B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ZcM-er-2hv"/>
+                            <constraint firstItem="G9h-UA-lRb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="anp-V9-wLt"/>
+                            <constraint firstItem="Pj0-rn-zAQ" firstAttribute="top" secondItem="2sv-jd-B3B" secondAttribute="bottom" constant="8" id="fzQ-K1-MIs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pj0-rn-zAQ" secondAttribute="trailing" constant="16" id="i9p-n9-B3g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2sv-jd-B3B" secondAttribute="trailing" constant="16" id="iPE-Jr-UTu"/>
+                            <constraint firstItem="G9h-UA-lRb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nUu-kH-VZs"/>
+                            <constraint firstItem="Pj0-rn-zAQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="qCr-fj-Xbu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="Pj0-rn-zAQ" id="fkz-ES-17L"/>
+                        <outlet property="imageView" destination="G9h-UA-lRb" id="ruc-Rf-AoM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="127"/>
+        </scene>
+        <!--Single StoryVC-->
+        <scene sceneID="Aib-Ad-Zfc">
+            <objects>
+                <viewController storyboardIdentifier="SingleStoryVC" id="R2w-6N-uuX" customClass="SingleStoryVC" customModule="ChangingPerspectives" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ono-tw-OLi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="single-story" translatesAutoresizingMaskIntoConstraints="NO" id="cBq-rW-EdM">
+                                <rect key="frame" x="57" y="144" width="300" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Bej-DO-J3q"/>
+                                    <constraint firstAttribute="height" constant="250" id="wDr-fc-YSd"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Single Story" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxY-Q7-37Y">
+                                <rect key="frame" x="16" y="115" width="382" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoL-n0-OHF">
+                                <rect key="frame" x="16" y="402" width="382" height="203"/>
+                                <string key="text">In class, we learned about the Single Story.  This ted talk emphasized that we may have a perception of the world that is often incomplete which gives us a false impression.  We can also be taking an etic lense by imposing our own impressions on someone else like we previously saw with the dress.  If you took the etic lense, you would have assumed that everyone saw the same colored dress as you when in fact many people do not see it the way you did. </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Red-pY-jUD">
+                                <rect key="frame" x="16" y="621" width="382" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="rSo-GQ-xkq"/>
+                                </constraints>
+                                <state key="normal" title="Connect To Class">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="changePerspective:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Q1-Mb-O1o"/>
+                                    <action selector="nextScreen:" destination="R2w-6N-uuX" eventType="touchUpInside" id="0nP-Yg-I0Y"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nhu-Ag-nTd" firstAttribute="trailing" secondItem="aoL-n0-OHF" secondAttribute="trailing" constant="16" id="1Aa-WJ-ewo"/>
+                            <constraint firstItem="cBq-rW-EdM" firstAttribute="top" secondItem="nhu-Ag-nTd" secondAttribute="top" constant="100" id="3LI-m6-ENh"/>
+                            <constraint firstItem="cBq-rW-EdM" firstAttribute="top" secondItem="hxY-Q7-37Y" secondAttribute="bottom" constant="8" id="5HF-yu-pui"/>
+                            <constraint firstItem="nhu-Ag-nTd" firstAttribute="trailing" secondItem="hxY-Q7-37Y" secondAttribute="trailing" constant="16" id="6jd-4H-Gjk"/>
+                            <constraint firstItem="Red-pY-jUD" firstAttribute="leading" secondItem="nhu-Ag-nTd" secondAttribute="leading" constant="16" id="8R7-uy-yOw"/>
+                            <constraint firstItem="nhu-Ag-nTd" firstAttribute="trailing" secondItem="Red-pY-jUD" secondAttribute="trailing" constant="16" id="E2k-O3-das"/>
+                            <constraint firstItem="aoL-n0-OHF" firstAttribute="leading" secondItem="ono-tw-OLi" secondAttribute="leading" constant="16" id="J9t-D1-lpz"/>
+                            <constraint firstItem="Red-pY-jUD" firstAttribute="top" secondItem="aoL-n0-OHF" secondAttribute="bottom" constant="16" id="Keg-E8-N4s"/>
+                            <constraint firstItem="hxY-Q7-37Y" firstAttribute="leading" secondItem="nhu-Ag-nTd" secondAttribute="leading" constant="16" id="bXO-46-DEm"/>
+                            <constraint firstItem="aoL-n0-OHF" firstAttribute="top" secondItem="cBq-rW-EdM" secondAttribute="bottom" constant="8" id="fw7-YU-TkD"/>
+                            <constraint firstItem="cBq-rW-EdM" firstAttribute="centerX" secondItem="ono-tw-OLi" secondAttribute="centerX" id="jak-m3-43n"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nhu-Ag-nTd"/>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="Red-pY-jUD" id="d8j-bR-Fvw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l9U-Fe-qbA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="883" y="131"/>
+        </scene>
+        <!--Prompt-->
+        <scene sceneID="i6x-2M-1bV">
+            <objects>
+                <viewController id="rZQ-jh-iyA" customClass="Prompt" customModule="ChangingPerspectives" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2e7-T4-rdd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue_white_dress" translatesAutoresizingMaskIntoConstraints="NO" id="VPQ-Za-JCG">
+                                <rect key="frame" x="57" y="198" width="300" height="500"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="T3P-xR-iGx"/>
+                                    <constraint firstAttribute="width" constant="300" id="TxN-FM-P8G"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mnx-Vt-9oL">
+                                <rect key="frame" x="16" y="772" width="382" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0m2-rI-Qx4">
+                                        <rect key="frame" x="0.0" y="0.0" width="186" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Dki-U7-cqg"/>
+                                        </constraints>
+                                        <state key="normal" title="Black and Blue">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="promptStats:" destination="rZQ-jh-iyA" eventType="touchUpInside" id="Vet-RP-M7v"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sn9-nF-1a6">
+                                        <rect key="frame" x="196" y="0.0" width="186" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Ql0-xd-eHM"/>
+                                        </constraints>
+                                        <state key="normal" title="White and Gold">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="promptStats:" destination="rZQ-jh-iyA" eventType="touchUpInside" id="dcJ-sc-dOE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="nV8-dt-54R"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What colors do you see?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W91-mP-mHH">
+                                <rect key="frame" x="16" y="735.5" width="382" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yVz-TI-jmv">
+                                <rect key="frame" x="0.0" y="44" width="414" height="808"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMo-N0-E9w">
+                                        <rect key="frame" x="16" y="254" width="382" height="300"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="300" id="eLB-A3-87q"/>
+                                        </constraints>
+                                        <mutableString key="text">According to a Buzzfeed poll, 2/3rds of the population saw the white and gold dress.  The actual dress was black and blue which shows us that just because we have a perception or idea about something, it doesn't mean it's right or that others share the same experience.  We take for granted that what we can physically see is the same as other people which this example proves that is wrong.  It brings a deeper meaning that our perception and idea of something could be totally different than someone else's even if we are provided with the same information, such as the visuaal data presented here.</mutableString>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOg-UH-SUy">
+                                        <rect key="frame" x="16" y="554" width="382" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="SFm-8o-C4i"/>
+                                        </constraints>
+                                        <state key="normal" title="Adjust Your Perspective">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextScreen:" destination="rZQ-jh-iyA" eventType="touchUpInside" id="miS-Li-zrF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="JOg-UH-SUy" firstAttribute="leading" secondItem="yVz-TI-jmv" secondAttribute="leading" constant="16" id="EMR-H6-sbg"/>
+                                    <constraint firstAttribute="trailing" secondItem="RMo-N0-E9w" secondAttribute="trailing" constant="16" id="hXD-aC-hp9"/>
+                                    <constraint firstAttribute="trailing" secondItem="JOg-UH-SUy" secondAttribute="trailing" constant="16" id="nuq-50-DBi"/>
+                                    <constraint firstItem="JOg-UH-SUy" firstAttribute="top" secondItem="RMo-N0-E9w" secondAttribute="bottom" id="rmr-Da-1bk"/>
+                                    <constraint firstItem="RMo-N0-E9w" firstAttribute="centerX" secondItem="yVz-TI-jmv" secondAttribute="centerX" id="v9N-3Q-W1J"/>
+                                    <constraint firstItem="RMo-N0-E9w" firstAttribute="leading" secondItem="yVz-TI-jmv" secondAttribute="leading" constant="16" id="x1V-mD-EDe"/>
+                                    <constraint firstItem="RMo-N0-E9w" firstAttribute="centerY" secondItem="yVz-TI-jmv" secondAttribute="centerY" id="yEw-ea-BYp"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mnx-Vt-9oL" firstAttribute="top" secondItem="W91-mP-mHH" secondAttribute="bottom" constant="16" id="EM1-ic-PmJ"/>
+                            <constraint firstItem="yVz-TI-jmv" firstAttribute="centerX" secondItem="2e7-T4-rdd" secondAttribute="centerX" id="EzP-Up-SsB"/>
+                            <constraint firstItem="VPQ-Za-JCG" firstAttribute="centerY" secondItem="2e7-T4-rdd" secondAttribute="centerY" id="Fvc-U3-nQf"/>
+                            <constraint firstItem="W91-mP-mHH" firstAttribute="leading" secondItem="inh-Bv-lKx" secondAttribute="leading" constant="16" id="HSl-KV-Yck"/>
+                            <constraint firstItem="yVz-TI-jmv" firstAttribute="centerY" secondItem="2e7-T4-rdd" secondAttribute="centerY" id="QtT-sO-4Iq"/>
+                            <constraint firstItem="inh-Bv-lKx" firstAttribute="trailing" secondItem="mnx-Vt-9oL" secondAttribute="trailing" constant="16" id="brg-u7-Pvh"/>
+                            <constraint firstItem="mnx-Vt-9oL" firstAttribute="leading" secondItem="inh-Bv-lKx" secondAttribute="leading" constant="16" id="eCQ-uH-gKw"/>
+                            <constraint firstItem="VPQ-Za-JCG" firstAttribute="centerX" secondItem="2e7-T4-rdd" secondAttribute="centerX" id="gVe-l3-fLQ"/>
+                            <constraint firstItem="yVz-TI-jmv" firstAttribute="trailing" secondItem="inh-Bv-lKx" secondAttribute="trailing" id="iJ5-Y6-Zto"/>
+                            <constraint firstItem="yVz-TI-jmv" firstAttribute="top" secondItem="inh-Bv-lKx" secondAttribute="top" id="qoa-2T-Hjs"/>
+                            <constraint firstItem="inh-Bv-lKx" firstAttribute="bottom" secondItem="mnx-Vt-9oL" secondAttribute="bottom" constant="40" id="qqo-wk-q4N"/>
+                            <constraint firstItem="inh-Bv-lKx" firstAttribute="trailing" secondItem="W91-mP-mHH" secondAttribute="trailing" constant="16" id="u8z-ui-rQy"/>
+                            <constraint firstItem="yVz-TI-jmv" firstAttribute="leading" secondItem="inh-Bv-lKx" secondAttribute="leading" id="xcC-Mb-em3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="inh-Bv-lKx"/>
+                    </view>
+                    <connections>
+                        <outlet property="b1" destination="0m2-rI-Qx4" id="1D0-Kp-0co"/>
+                        <outlet property="b2" destination="Sn9-nF-1a6" id="Tb0-Lf-YO4"/>
+                        <outlet property="infoLabel" destination="RMo-N0-E9w" id="JfI-b2-YaO"/>
+                        <outlet property="nextScreenButton" destination="JOg-UH-SUy" id="Cvd-4D-nVY"/>
+                        <outlet property="shadowView" destination="yVz-TI-jmv" id="BbO-oo-Ppo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="orw-H9-Wgh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="781"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="3sG-rv-sL7">
+            <objects>
+                <viewController storyboardIdentifier="FinalThoughts" id="dUw-Cg-UIl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fPk-pQ-bHE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="36" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTO-Bq-YJ4">
+                                <rect key="frame" x="16" y="84" width="382" height="548"/>
+                                <mutableString key="text">Building off the idea of the single story, in class we learned that our initial perceptions of groups such as the Fraternal Order of Eagles being a cult or weird was an incomplete story that stemmed from us being on the outside and taking an etic lense.  Once the time was taken to get to know them, these misconceptions faded away.  Similarly, Mila initially thought powerlifters were offputting, exclusive and intimidating.  After she got to interview them, she found that they were actually quite inclusive and friendly; striving to help everyone reach their goals.  Again this was an etic lense and a single story that was imposed on this culter.  We need to break our perceptions of people and try to be more understanding while taking an emic lense, truly trying to understand their point of view.  Personally, I assumed that many others took the same opinions I had on steroids. To my surprise, I was enlightened when finding that there were a huge variety emotional responses to the idea of steroids as well as opinions on what was a valid use case.  On the image of steroids, I looked at the picture and assumed everyone saw it the same way I did when in reality we all can look at the same image and see different things or even just focus on different aspects of the same image.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sTO-Bq-YJ4" firstAttribute="top" secondItem="UoW-8w-qv1" secondAttribute="top" constant="40" id="9F2-4K-tMl"/>
+                            <constraint firstItem="UoW-8w-qv1" firstAttribute="trailing" secondItem="sTO-Bq-YJ4" secondAttribute="trailing" constant="16" id="dRG-zt-AyF"/>
+                            <constraint firstItem="sTO-Bq-YJ4" firstAttribute="leading" secondItem="UoW-8w-qv1" secondAttribute="leading" constant="16" id="kQg-Cz-a7B"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UoW-8w-qv1"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ug-Qx-Nd6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="883" y="786"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="blue_white_dress" width="220" height="293"/>
+        <image name="single-story" width="2000" height="1413"/>
+    </resources>
+</document>
